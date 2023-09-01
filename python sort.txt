@@ -1,0 +1,186 @@
+1.Machine code is a program written in machine language, which consists of sequences of digital binary numbers: 0s and 1s.
+2.Each language, be it machine language or natural language, consists of an alphabet, a lexis, a syntax, and semantics.
+3.What do you call a file containing a program written in a high-level programming languageA source file is a file that contains source code, that is, a program’s instructions.
+4.The compiler translates (compiles) the source program (a set of high-level language instructions) into machine code (a lower-level representation of the source program). The sequence of 0s and 1s can be then executed by the processor. The execution of the compiled code is usually faster than interpretation
+5.What is the best definition of a script?It's a text file that contains instructions which make up a Python program
+A script is a set of high-level language commands in a file, structured to be executed like a program. A Python script is therefore a file containing code written in Pyt
+6.Python is a free and open-source programming language available to everyone. It is a multi- and cross-platform language, which means a Python program written on a Linux system will run on a Mac, and vice versa.
+
+Because Python is relatively easy to learn and contains simple syntax, it is a good choice for testers.
+
+7.A Python console is a command-line interpreter that allows you to execute Python commands, instructions, and scripts line by line.
+8.What is CPython?It's the default, reference implementation of Python, written in the C language
+
+The backslash (\) has a very special meaning when used inside strings ? this is called the escape character.n placed after the backslash comes from the word newline.
+SECTION 1 :
+. The print() function is a built-in function. It prints/outputs a specified message to the screen/consol window.
+
+2. Built-in functions, contrary to user-defined functions, are always available and don't have to be imported. Python 3.8 comes with 69 built-in functions. You can find their full list provided in alphabetical order in the Python Standard Library.
+
+3. To call a function (this process is known as function invocation or function call), you need to use the function name followed by parentheses. You can pass arguments into a function by placing them inside the parentheses. You must separate arguments with a comma, e.g., print("Hello,", "world!"). An "empty" print() function outputs an empty line to the screen.
+
+4. Python strings are delimited with quotes, e.g., "I am a string" (double quotes), or 'I am a string, too' (single quotes).
+
+5. Computer programs are collections of instructions. An instruction is a command to perform a specific task when executed, e.g., to print a certain message to the screen.
+6. In Python strings the backslash (\) is a special character which announces that the next character has a different meaning, e.g., \n (the newline character) starts a new output line.
+
+7. Positional arguments are the ones whose meaning is dictated by their position, e.g., the second argument is outputted after the first, the third is outputted after the second, etc.positional argument follows keyword argument
+Remember: Keyword arguments should be passed after any required positional arguments.
+
+8. Keyword arguments are the ones whose meaning is not dictated by their location, but by a special word (keyword) used to identify them.
+
+9. The end and sep parameters can be used for formatting the output of the print() function. The sep parameter specifies the separator between the outputted arguments, e.g., print("H", "E", "L", "L", "O", sep="-"), whereas the end parameter specifies what to print at the end of the print statement
+
+SECTION 2: LITERALS,INTEGERS,FLOAT,STRINGS,BOOLEA,
+1. Literals are notations for representing some fixed values in code. Python has various types of literals - for example, a literal can be a number (numeric literals, e.g., 123), or a string (string literals, e.g., "I am a literal.").
+
+2. The binary system is a system of numbers that employs 2 as the base. Therefore, a binary number is made up of 0s and 1s only, e.g., 1010 is 10 in decimal.
+
+Octal and hexadecimal numeration systems, similarly, employ 8 and 16 as their bases respectively. The hexadecimal system uses the decimal numbers and six extra letters.
+3. Integers (or simply ints) are one of the numerical types supported by Python. They are numbers written without a fractional component, e.g., 256, or -1 (negative integers).
+
+4. Floating-point numbers (or simply floats) are another one of the numerical types supported by Python. They are numbers that contain (or are able to contain) a fractional component, e.g., 1.27.
+
+5. To encode an apostrophe or a quote inside a string, you can either use the escape character, e.g., 'I\'m happy.', or open and close the string using an opposite set of symbols to the ones you wish to encode, e.g., "I'm happy." to encode an apostrophe, and 'He said "Python", not "typhoon"' to encode a (double) quote.
+
+6. Boolean values are the two constant objects True and False used to represent truth values (in numeric contexts 1 is True, while 0 is False.
+
+
+  Extra  
+
+There is one more, special literal that is used in Python: the None literal. This literal is a NoneType object, and it is used to represent the absence of a value. We'll tell you more about it soon.
+
+3.SECTION 3
+14 // 4 gives 3 ? this is the  quotient(round off value);(interger /floor divison)
+14/4 gives 3.5-->quotient(decimal value)
+14%4=2  --> remainder (modulo)
+
+1. An expression is a combination of values (or variables, operators, calls to functions ? you will learn about them soon) which evaluates to a certain value, e.g., 1 + 2.
+
+2. Operators are special symbols or keywords which are able to operate on the values and perform (mathematical) operations, e.g., the * operator multiplies two values: x * y.
+
+3. Arithmetic operators in Python: + (addition), - (subtraction), * (multiplication), / (classic division ? always returns a float), % (modulus ? divides left operand by right operand and returns the remainder of the operation, e.g., 5 % 2 = 1), ** (exponentiation ? left operand raised to the power of right operand, e.g., 2 ** 3 = 2 * 2 * 2 = 8), // (floor/integer division ? returns a number resulting from division, but rounded down to the nearest whole number, e.g., 3 // 2.0 = 1.0)
+
+4. A unary operator is an operator with only one operand, e.g., -1, or +3.
+
+5. A binary operator is an operator with two operands, e.g., 4 + 5, or 12 % 5.
+
+6. Some operators act before others - the hierarchy of priorities:
+PEMDAS=
+the ** operator (exponentiation) has the highest priority;
+then the unary + and - (note: a unary operator to the right of the exponentiation operator binds more strongly, for example 4 ** -1 equals 0.25)
+then: *, /, and %,
+and finally, the lowest priority: binary + and -.
+7. Subexpressions in parentheses are always calculated first, e.g., 15 - 1 * (5 * (1 + 2)) = 0.
+
+8. The exponentiation operator uses right-sided binding, e.g., 2 ** 2 ** 3 = 256.
+
+
+BUBBLE SORT"
+def bubblesort(a):
+   
+	n=len(a)
+    
+	for i in range(0,n):
+        
+	    for j in range(0,n-1):
+           
+		 if a[j]>a[j+1]:
+               
+		    a[j],a[j+1]=a[j+1],a[j]
+    
+
+
+
+a=[22,20,2,15]
+
+bubblesort(a)
+
+print(a)
+ 
+ 4.INSERTION SORT:
+
+def insertion_sort(list1):
+
+
+	for i in range(0, len(list1)):
+
+				      
+a = list1[i]
+
+                         j = i - 1
+		
+			
+	      while j >= 0 and a < list1[j]:
+		
+			list1[j + 1] = list1[j]
+	
+				j -= list1[j + 1] = a
+		
+	     return list1
+			
+list1 = [ 7, 2, 1, 6 ]
+
+print("The unsorted list is:", list1)
+
+print("The sorted new list is:", insertion_sort(list1))
+
+
+5.SELECTION SORT:
+
+def selectionSort(array):
+         size = len(data)
+         for s in range(size):
+	min_idx = s
+		
+	 for i in range(s + 1, size):
+	        if array[i] < array[min_idx]:
+		min_idx = i
+		(array[s], array[min_idx]) = (array[min_idx], array[s])
+
+data = [ 7, 2, 1, 6 ]
+selectionSort(data)
+print('Sorted Array in Ascending Order is :')
+print(data)
+
+
+6.MERGE SORT :
+
+def mergeSort(array):
+    if len(array) > 1:
+
+        r = len(array)//2
+        L = array[:r]
+        M = array[r:]
+        mergeSort(L)
+        mergeSort(M)
+
+        i = j = k = 0
+        while i < len(L) and j < len(M):
+            if L[i] < M[j]:
+                array[k] = L[i]
+                i += 1
+            else:
+                array[k] = M[j]
+                j += 1
+            k += 1
+        while i < len(L):
+            array[k] = L[i]
+            i += 1
+            k += 1
+
+        while j < len(M):
+            array[k] = M[j]
+            j += 1
+            k += 1
+def printList(array):
+    for i in range(len(array)):
+        print(array[i], end=" ")
+    print()
+if __name__ == '__main__':
+    array = [6, 5, 12, 10, 9, 1]
+
+    mergeSort(array)
+
+    print("Sorted array is: ")
+    printList(array)
